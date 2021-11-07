@@ -6,7 +6,7 @@ function findMatching(array, string) {
 }
 function fuzzyMatch(anArray, string) {
     return anArray.filter((element) => { 
-        return element.includes(string.charAt(1))
+        return element.includes(string.slice(0, 1))
     })
 }
 function matchName(drivers, string)  {
