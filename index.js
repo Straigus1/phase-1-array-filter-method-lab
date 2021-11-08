@@ -6,9 +6,10 @@ function findMatching(array, string) {
 }
 function fuzzyMatch(anArray, string) {
     return anArray.filter((element) => { 
-        return element.includes(string.slice(0, 1))
+        return element.indexOf(string)
+        // We need to determine if the string variable matches the beginnigng of the element string
     })
 }
 function matchName(drivers, string)  {
-    drivers.filter(obj => obj.name === string)
+    return drivers.filter(obj => obj.name === string)
 }
